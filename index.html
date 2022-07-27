@@ -14,7 +14,7 @@
             getData();
 
             async function getData() {
-                const reponse = await fetch('testdata.csv');
+                const reponse = await fetch('testData.csv');
                 //const reponse = await fetch('ZonAnn.Ts+dSST.csv');
                 const data = await reponse.text();
                 console.log(data);
