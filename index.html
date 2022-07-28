@@ -25,8 +25,8 @@
                         datasets: [{
                             label: 'Global Average Temperature',
                             data: ytemps,
-                            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-                            borderColor: ['rgba(255, 99, 132, 1)'],
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
                             borderWidth: 1
                         }]
                     }
@@ -45,8 +45,8 @@
                     const cols = row.split(',');
                     const year = cols[0];
                     xlabels.push(year);
-                    const temp = cols[1];
-                    ytemps.push(temp + 14);
+                    const temp = cols[1];                    
+                    ytemps.push(parseFloat(temp) + 14); //global mean is 14 degrees C
                     console.log(year, temp);
                 });                
             }
